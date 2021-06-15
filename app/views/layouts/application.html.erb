@@ -11,7 +11,19 @@
   </head>
 
   <body>
-    
+    <nav class="container-fluid d-flex justify-content-between"> 
+      <div>
+        <%= link_to "Members-Only", posts_path%>
+      </div>
+      <div>
+        <% if user_signed_in? %>
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "Sign In", new_user_session_path %>
+          <%= link_to "Sign Up", new_user_registration_path %>
+        <% end %>
+      </div>
+    </nav>
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
     <% end %>
