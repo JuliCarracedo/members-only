@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-users = User.create([
+User.create([
   {
     username: 'user_001',
     email: 'user_001@example.com',
@@ -27,7 +27,7 @@ users = User.create([
   }
 ])
 
-posts = Post.create([
+Post.create([
   {
     title: 'A clever post!',
     body: 'A lot of very interesting ideas to share',
