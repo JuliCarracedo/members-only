@@ -5,28 +5,25 @@
 
       <ul>
         <% post.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+          <li class="danger"><%= error.full_message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.label :title, class: "form-label mt-1" %>
+    <%= form.text_field :title, class: "form-control mb-2" %>
   </div>
 
   <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
+    <%= form.label :body, class: "form-label mt-1" %>
+    <%= form.text_area :body, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
+  <%= form.hidden_field :user_id, value: current_user.id %>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions my-3">
+    <%= form.submit button_tag, class: 'btn btn-primary' %>
   </div>
 <% end %>
