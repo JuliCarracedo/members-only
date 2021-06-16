@@ -8,22 +8,22 @@
 
 User.create([
   {
-    username: 'user_001',
-    email: 'user_001@example.com',
-    password: 'secret',
-    password_confirmation: 'secret'
+    username: 'user001',
+    email: 'user001@example.com',
+    password: 'Secret1',
+    password_confirmation: 'Secret1'
   },
   {
-    username: 'user_002',
-    email: 'user_002@example.com',
-    password: 'secret',
-    password_confirmation: 'secret'
+    username: 'user002',
+    email: 'user002@example.com',
+    password: 'Secret1',
+    password_confirmation: 'Secret1'
   },
   {
-    username: 'user_003',
-    email: 'user_003@example.com',
-    password: 'secret',
-    password_confirmation: 'secret'
+    username: 'user003',
+    email: 'user003@example.com',
+    password: 'Secret1',
+    password_confirmation: 'Secret1'
   }
 ])
 
