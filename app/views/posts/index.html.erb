@@ -37,13 +37,13 @@
 
   <nav aria-label="Page navigation" class="mt-5 d-flex justify-content-center">
     <ul class="pagination">
-      <li class="page-item">
+      <li class="page-item <%="disabled" unless @page.positive? %> ">
         <%= link_to 'Prev', posts_path(page: @page - 1), class: 'page-link' %>
       </li>
       <li class="page-item disabled">
         <%= link_to (@page + 1), posts_path(page: @page), class: 'page-link' %>
       </li>
-      <li class="page-item">
+      <li class="page-item <%="disabled" unless @page < @max %>">
         <%= link_to 'Next', posts_path(page: @page + 1), class: 'page-link' %>
       </li>
     </ul>
