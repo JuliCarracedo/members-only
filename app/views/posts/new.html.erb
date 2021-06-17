@@ -1,0 +1,9 @@
+<div class="container border rounded w-75 mt-5 p-2">
+
+  <h1>New Post</h1>
+
+  <%= render 'form', post: @post, button_tag: "Create Post" %>
+
+  <%= link_to 'Back', posts_path, class: 'btn btn-secondary' %>
+
+</div>

@@ -1,0 +1,36 @@
+<div class="container border rounded w-75 mt-5 p-2">
+  <h2>Welcome back!</h2>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="field">
+      <%= f.label :email, class: "form-label" %><br />
+      <%= f.email_field :email, placeholder: "example@email.com",class: "form-control", aria: {describedby: "passwordHelpBlock"}%>
+      <div id="passwordHelpBlock" class="form-text">
+        Remember an email always contains an @ symbol
+      </div>
+    </div>
+
+    <div class="field">
+      <%= f.label :password, class: "form-label" %><br />
+      <%= f.password_field :password, placeholder: "******",class: "form-control", aria: {describedby: "passwordHelpBlock"} %>
+      <div id="passwordHelpBlock" class="form-text">
+      Your password must be 6-20 characters long, contain letters and numbers,must not contain special characters, or emoji.
+      </div>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+    <div class="d-flex p-2 m-2 justify-content-between w-50" >
+      <div class="actions">
+        <%= f.submit "Log in", class: "btn btn-primary"%>
+      </div>
+      <%= render "devise/shared/links" %>
+    </div>
+  <% end %>
+
+ 
+</div>
