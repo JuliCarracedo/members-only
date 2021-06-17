@@ -7,6 +7,8 @@ class PostsController < ApplicationController
   def index
     @page = params.fetch(:page, 0).to_i
     @max = ((Post.all.count - 1) / POSTS_PER_PAGE.to_f).floor
+    redirect_to '/404' if @page.negative? or @page > @max
+
     @posts = Post.all.order('created_at DESC').offset(@page * POSTS_PER_PAGE).limit(POSTS_PER_PAGE)
   end
 

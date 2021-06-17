@@ -50,7 +50,13 @@ $ bundle exec rake webpacker:install
 ### Install
 
 - Run `$ rails db:migrate` to migrate the databases needed to run this project.
-- Run `$ rails db:seed` to load some record samples for both Users and Posts Tables.
+- Run `$ rails db:seed` to load some record samples for both Users and Posts Tables. By doing this, you should get 10 sample posts and the following users, out of the box:
+  | username | email | password |
+  |----------|---------------------|----------|
+  | user001 | user001@example.com | Secret1 |
+  | user002 | user002@example.com | Secret1 |
+  | user003 | user003@example.com | Secret1 |
+
 - Run `$ rails server` to start your local host. You can stop your local server pressing `<ctrl> + c` on your keyboard.
 - On the browser of your preference, you can go to http://127.0.0.1:3000/ and you should be able to see the home page which shows all the posts. Now, you can either "Sign in" with one of the previously added users (see list below) or you can "Sign up" with a new user with the "Sign Up" button.
 
